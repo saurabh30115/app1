@@ -7,7 +7,7 @@ function Home() {
 
   const loginUser = async (email) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', { email });
+      const response = await axios.post('https://backend-qm1n.onrender.com/api/users/login', { email });
       setUser(response.data);
     } catch (error) {
       console.error('Error logging in:', error);

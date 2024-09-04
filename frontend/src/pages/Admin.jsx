@@ -8,12 +8,12 @@ function Admin() {
   const [availability, setAvailability] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/users').then((response) => setUsers(response.data));
+    axios.get('https://backend-qm1n.onrender.com/api/users').then((response) => setUsers(response.data));
   }, []);
 
   const fetchAvailability = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/availability/${userId}`);
+      const response = await axios.get(`//https://backend-qm1n.onrender.com/api/availability/${userId}`);
       setAvailability(response.data);
     } catch (error) {
       console.error('Error fetching availability:', error);
